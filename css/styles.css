@@ -4,12 +4,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fcb40c; 
+    background-color: #ffffff; 
 }
 
 header {
-    background-color: #F0F0F0; 
-    color: #F0F0F0;
+    background-color: #fcb40c; 
+    color: #fcb40c;
     padding: 20px;
     text-align: center;
 }
@@ -26,7 +26,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 main {
