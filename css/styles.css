@@ -1,13 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFE5B4; 
+    background-color: #fcb40c; 
 }
 
 header {
-    background-color: #FFA07A; 
-    color: white;
+    background-color: #F0F0F0; 
+    color: #F0F0F0;
     padding: 20px;
     text-align: center;
 }
@@ -44,7 +45,7 @@ input[type="file"] {
 }
 
 button[type="submit"] {
-    background-color: #FFA07A;
+    background-color: #fcb40c;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -57,8 +58,7 @@ button[type="submit"]:hover {
 }
 
 footer {
-    background-color: #FFA07A;
-    color: white;
+    color: black;
     text-align: center;
     position: fixed;
     bottom: 0;
