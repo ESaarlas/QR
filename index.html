@@ -3,68 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag</title>
-    <link rel="icon" href="logos/favicon.png" type="tagicon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="scripts/script.js" defer></script>
-
+    <title>Profile QR Generator</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+        <h1>Profile QR Generator</h1>
     </header>
-
-    <main>
-        <section id="about">
-            <h2>About Tag</h2>
-            <p>Tag consolidates your social media accounts, background, "about me" information, and resume into a single QR code, streamlining the job application process.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Tag | All rights reserved.</p>
-    </footer>
-
     
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
-        crossorigin="anonymous"
-    ></script>
+    <section id="form-section">
+        <h2>Create Your Profile</h2>
+        <form id="profile-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="social_links">Social Links (Comma separated):</label>
+            <input type="text" id="social_links" name="social_links" required>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" required></textarea>
+
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
+
+            <button type="submit">Create Profile</button>
+        </form>
+    </section>
+
+    <section id="account-section" style="display:none;">
+        <h2>Your Profile</h2>
+        <div id="profile-display"></div>
+        <button id="export-qr">Export QR Code</button>
+    </section>
+
+    <section id="qr-section" style="display:none;">
+        <h2>Your QR Code</h2>
+        <div id="qr-code"></div>
+        <a id="download-qr" download="qr_code.png">Download QR Code</a>
+    </section>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
